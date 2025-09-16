@@ -3,12 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ASTECH IT SOLUTION — Softwares & Websites Development</title>
-  <meta name="description" content="ASTECH IT SOLUTION builds modern websites and custom software. We design, develop, and maintain fast, secure, and scalable digital products.">
-  <meta property="og:title" content="ASTECH IT SOLUTION">
-  <meta property="og:description" content="Websites • Web Apps • Custom Software">
+
+  <!-- SEO Title & Meta -->
+  <title>AS TECH IT SOLUTION | Software & Website Development in India</title>
+  <meta name="description" content="AS TECH IT SOLUTION builds modern websites and custom software. We design, develop, and maintain fast, secure, and scalable digital products in India.">
+  <meta name="keywords" content="AS TECH IT SOLUTION, software development, website design, IT services India, custom software, web apps, astechit.in">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://astechit.in/">
+
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:title" content="AS TECH IT SOLUTION — Software & Website Development">
+  <meta property="og:description" content="Websites • Web Apps • Custom Software • IT Services">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/mylogo.png">
+  <meta property="og:url" content="https://astechit.in/">
+  <meta property="og:image" content="https://astechit.in/assets/img/mylogo.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AS TECH IT SOLUTION">
+  <meta name="twitter:description" content="We build software, websites, and IT solutions to help your business grow.">
+  <meta name="twitter:image" content="https://astechit.in/assets/img/mylogo.png">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AS TECH IT SOLUTION",
+    "url": "https://astechit.in",
+    "logo": "https://astechit.in/assets/img/mylogo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-XXXXXXXXXX",
+      "contactType": "customer support",
+      "areaServed": "IN",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://www.facebook.com/astechit",
+      "https://www.linkedin.com/company/astechit",
+      "https://twitter.com/astechit"
+    ]
+  }
+  </script>
+
+  <!-- Favicon & Styles -->
   <link rel="icon" href="assets/img/mylogo.png">
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -158,8 +197,8 @@
   <!-- Header -->
   <header class="container header">
     <a class="brand" href="index.html">
-      <img alt="ASTECH IT SOLUTION logo" src="assets/img/mylogo.png" width="56" height="56">
-      <span>ASTECH IT SOLUTION</span>
+      <img alt="AS TECH IT SOLUTION logo" src="assets/img/mylogo.png" width="56" height="56">
+      <span>AS TECH IT SOLUTION</span>
     </a>
     <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
     <nav>
@@ -176,7 +215,7 @@
     <!-- Hero -->
     <section class="hero container" style="border:2px solid #007bff; border-radius:12px; padding:2rem; margin-bottom:2rem;">
       <h1>We build <span class="accent">softwares</span> & <span class="accent">websites </span>that help you grow.</h1>
-      <p>From idea to launch, ASTECH IT SOLUTION delivers clean design, reliable engineering, and ongoing support.</p>
+      <p>From idea to launch, AS TECH IT SOLUTION delivers clean design, reliable engineering, and ongoing support.</p>
       <div class="cta">
         <a class="btn" href="#contact">Request a free quote</a>
         <a class="btn " href="services.html">See what we do</a>
@@ -188,7 +227,7 @@
       </ul>
     </section>
 
-    <!-- Core Services -->
+       <!-- Core Services -->
     <!-- (unchanged code for services + work carousel kept same for brevity) -->
 
 <!-- Core Services -->
@@ -402,11 +441,6 @@
   
 </style>
 
-
-
-
-
-
     <!-- Contact -->
     <section id="contact" class="container contact">
       <h2>Contact</h2>
@@ -444,7 +478,7 @@
 
   <!-- Footer -->
   <footer class="container footer">
-    <p>© <span id="year"></span> ASTECH IT SOLUTION. All rights reserved.</p>
+    <p>© <span id="year"></span> AS TECH IT SOLUTION. All rights reserved.</p>
   </footer>
 
   <script>
@@ -476,11 +510,10 @@
         errorBox.textContent = "❌ Please enter a valid name (only letters, 2-50 characters).";
         return;
       }
-     if (!/^[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
-  errorBox.textContent = "❌ Please enter a valid email address.";
-  return;
-}
-
+      if (!/^[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+        errorBox.textContent = "❌ Please enter a valid email address.";
+        return;
+      }
       if (!/^\d{10}$/.test(phone)) {
         errorBox.textContent = "❌ Please enter a valid 10-digit mobile number.";
         return;
