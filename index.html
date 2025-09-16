@@ -159,8 +159,11 @@
         transition: max-height 0.4s ease, opacity 0.4s ease;
       }
 
-    nav a.active { color: #3b82f6; }
-  
+      nav.active {
+        max-height: 500px;
+        opacity: 1;
+        pointer-events: auto;
+      }
 
       nav a {
        padding: 4px 10px;
@@ -193,17 +196,17 @@
 <body>
   <!-- Header -->
   <header class="container header">
-     <a class="brand" href="index">
-      <img src="/assets/img/mylogo.png" alt="AS TECH IT SOLUTION logo">
+    <a class="brand" href="index.html">
+      <img alt="AS TECH IT SOLUTION logo" src="assets/img/mylogo.png" width="56" height="56">
       <span>AS TECH IT SOLUTION</span>
     </a>
     <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
     <nav>
-      <a href="/" class="active">Home</a>
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-    <a href="pricing/">Pricing</a>
-      <a href="#contact">Contact</a>
+      <a href="/" style="color:#3b82f6 !important;">Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#work">Work</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/#contact">Contact</a>
       <a class="btn small" href="/services">All Services</a>
     </nav>
   </header>
