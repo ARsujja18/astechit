@@ -62,7 +62,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <style>
-    body {
+    body { 
       margin: 0;
       font-family: Arial, sans-serif;
       background: #0f172a;
@@ -165,35 +165,79 @@
       </ul>
     </section>
 
-    <!-- Sliding Service Gallery -->
+    <!-- Sliding Service Gallery --> 
+<style>
+
+	.service-gallery-track {
+  display: flex;
+  width: max-content;
+  animation: scrollGallery 40s linear infinite;
+}
+
+@keyframes scrollGallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Half the total width since slides are duplicated */
+}
+
+</style>
+
+
+	  
         <!-- Sliding Service Gallery -->
     <section class="service-gallery container">
       <div class="service-gallery-track" id="serviceTrack">
-        <div class="service-slide">
-          <img src="https://astechit.in/assets/img/simg/SD.jpg" alt="Custom Software Development">
-          <div class="service-caption">Custom Software Development</div>
-        </div>
-        <div class="service-slide">
-          <img src="https://astechit.in/assets/img/simg/EBI.jpg" alt="E-commerce Website">
-          <div class="service-caption">E-commerce Websites</div>
-        </div>
-        <div class="service-slide">
-          <img src="https://astechit.in/assets/img/simg/MAD.jpg" alt="Mobile App Development">
-          <div class="service-caption">Mobile App Development</div>
-        </div>
-        <div class="service-slide">
-          <img src="https://astechit.in/assets/img/simg/SEO.jpg" alt="SEO & Digital Marketing">
-          <div class="service-caption">SEO & Digital Marketing</div>
-        </div>
-        <div class="service-slide">
-          <img src="https://astechit.in/assets/img/simg/DBS.jpg" alt="Business Tools & Billing Apps">
-          <div class="service-caption">Business Tools & Billing Apps</div>
-        </div>
-		 <div class="service-slide">
-          <img src="https://astechit.in/assets/img/simg/BSM.jpg" alt="Bulk SMS">
-          <div class="service-caption">Bulk SMS</div>
-        </div>
-      </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/SD.jpg" alt="Custom Software Development">
+    <div class="service-caption">Custom Software Development</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/EBI.jpg" alt="E-commerce Website">
+    <div class="service-caption">E-commerce Websites</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/MAD.jpg" alt="Mobile App Development">
+    <div class="service-caption">Mobile App Development</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/SEO.jpg" alt="SEO & Digital Marketing">
+    <div class="service-caption">SEO & Digital Marketing</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/DBS.jpg" alt="Business Tools & Billing Apps">
+    <div class="service-caption">Business Tools & Billing Apps</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/BSM.jpg" alt="Bulk SMS">
+    <div class="service-caption">Bulk SMS</div>
+  </div>
+
+  <!-- Duplicate slides for smooth loop -->
+  <div class="service-slide">
+    <img src="assets/img/simg/SD.jpg" alt="Custom Software Development">
+    <div class="service-caption">Custom Software Development</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/EBI.jpg" alt="E-commerce Website">
+    <div class="service-caption">E-commerce Websites</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/MAD.jpg" alt="Mobile App Development">
+    <div class="service-caption">Mobile App Development</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/SEO.jpg" alt="SEO & Digital Marketing">
+    <div class="service-caption">SEO & Digital Marketing</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/DBS.jpg" alt="Business Tools & Billing Apps">
+    <div class="service-caption">Business Tools & Billing Apps</div>
+  </div>
+  <div class="service-slide">
+    <img src="assets/img/simg/BSM.jpg" alt="Bulk SMS">
+    <div class="service-caption">Bulk SMS</div>
+  </div>
+</div>
+
     </section>
 
     <!-- Services -->
@@ -282,10 +326,7 @@
     // Service Gallery Auto Slide
     const track = document.getElementById("serviceTrack");
     let index = 0;
-    setInterval(() => {
-      index = (index + 1) % track.children.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }, 4000);
+   
   </script>
 </body>
 </html>
