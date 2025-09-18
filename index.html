@@ -150,31 +150,34 @@
       align-items: center;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--text-primary);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 20px;
-      transition: all 0.3s ease;
-    }
+  .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
 
-    .brand:hover {
-      transform: scale(1.05);
-    }
+.brand:hover {
+  transform: scale(1.05);
+}
 
-    .brand img {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-    }
+.brand img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: var(--accent-gradient); /* ✨ added gradient background */
+  padding: 4px; /* gives logo some breathing space inside gradient */
+}
 
-    .brand:hover img {
-      box-shadow: var(--shadow-glow);
-    }
+.brand:hover img {
+  box-shadow: var(--shadow-glow); /* ✨ glow on hover */
+}
+
 
     nav {
       display: flex;
