@@ -3,281 +3,774 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Services — AS TECH IT SOLUTION</title>
-  <meta name="description" content="Services by AS TECH IT SOLUTION: Web development, custom software, eCommerce, UI/UX, and maintenance.">
-  <link rel="icon" href="../assets/img/mylogo.png">
-  <link rel="stylesheet" href="../assets/css/styles.css">
+
+  <!-- SEO -->
+  <title>Services — AS TECH IT SOLUTION | Professional Web & Software Development</title>
+  <meta name="description" content="Complete digital solutions by AS TECH IT SOLUTION: Web development, custom software, eCommerce, mobile apps, UI/UX design, SEO, and maintenance services.">
+  <meta name="keywords" content="web development, custom software, ecommerce, mobile apps, UI/UX design, SEO services, digital marketing, maintenance, AS TECH IT SOLUTION">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://astechit.in/services">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Services — AS TECH IT SOLUTION">
+  <meta property="og:description" content="Professional web development, custom software, and digital solutions">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://astechit.in/services">
+  <meta property="og:image" content="https://astechit.in/assets/img/mylogo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="48x48" href="https://astechit.in/favicon_48x48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://astechit.in/favicon_512x512.png">
+  <link rel="icon" type="image/x-icon" href="https://astechit.in/favicon.ico">
+  <link rel="apple-touch-icon" href="https://astechit.in/favicon_512x512.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* --- Body & Header --- */
-    body {
-      background: #0f172a;
-      color: #fff;
-      font-family: sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      --purple-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --orange-gradient: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
+      --dark-bg: #0a0e1a;
+      --darker-bg: #060914;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --text-primary: #ffffff;
+      --text-secondary: #b8c5d1;
+      --text-accent: #4facfe;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      --shadow-glow: 0 0 30px rgba(79, 172, 254, 0.3);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      opacity: 0;
+      animation: fadeInBody 0.8s ease-out 0.2s forwards;
+    }
+
+    @keyframes fadeInBody {
+      to { opacity: 1; }
+    }
+
+    /* Background Effects */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(79, 172, 254, 0.3) 0%, transparent 50%);
+      z-index: -1;
+      animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-30px) rotate(1deg); }
+      66% { transform: translateY(15px) rotate(-1deg); }
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 16px 0;
+      background: rgba(10, 14, 26, 0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
-      background: #0f172a;
-      position: relative;
-      z-index: 1000;
     }
+
     .brand {
       display: flex;
       align-items: center;
-      gap: 8px;
-      color: #fff;
+      gap: 12px;
+      color: var(--text-primary);
       text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
+      font-weight: 700;
+      font-size: 20px;
+      transition: all 0.3s ease;
     }
 
+    .brand:hover {
+      transform: scale(1.05);
+    }
 
-.btn.small.active {
-  background: #3b82f6 !important; /* Blue background */
-  color: #fff !important;        /* White text */
-  border-radius: 6px;
-  padding: 8px 14px;
-  font-weight: 600;
-}
-
-    
     .brand img {
-      width: 56px;
-      height: 56px;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
     }
+
+    .brand:hover img {
+      box-shadow: var(--shadow-glow);
+    }
+
     nav {
       display: flex;
-      gap: 10px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #3b82f6;
+      gap: 32px;
+      align-items: center;
     }
 
-    /* --- Mobile Menu Button --- */
+    nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+      padding: 8px 0;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--text-accent);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gradient);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after, nav a.active::after {
+      width: 100%;
+    }
+
+    .cta-btn {
+      background: var(--accent-gradient);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
     .menu-toggle {
       display: none;
       background: none;
       border: none;
+      color: var(--text-primary);
+      font-size: 24px;
       cursor: pointer;
-      color: #fff;
-      font-size: 28px;
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
+      padding: 8px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
     }
 
-    /* --- Service Card Headings --- */
-    .card h2 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: 12px 0;
-      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    .menu-toggle:hover {
+      background: var(--card-bg);
+    }
+
+    /* Main Content */
+    main {
+      padding: 140px 0 60px;
+      min-height: 100vh;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 80px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-header h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ffffff 0%, #4facfe 50%, #00f2fe 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: textGlow 2s ease-in-out infinite alternate;
     }
 
-    /* --- Service Grid Layout --- */
+    @keyframes textGlow {
+      from { filter: brightness(1); }
+      to { filter: brightness(1.2); }
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    /* Services Grid */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Desktop default */
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
     }
 
-    /* --- Tablet / Small Laptop --- */
-    @media (max-width: 1199px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .service-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px 30px;
+      backdrop-filter: blur(10px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease-out;
+      animation-fill-mode: both;
     }
 
-    /* --- Normal Mobile (portrait) --- */
-    @media (max-width: 768px) and (orientation: portrait) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-card:nth-child(3) { animation-delay: 0.3s; }
+    .service-card:nth-child(4) { animation-delay: 0.4s; }
+    .service-card:nth-child(5) { animation-delay: 0.5s; }
+    .service-card:nth-child(6) { animation-delay: 0.6s; }
+    .service-card:nth-child(7) { animation-delay: 0.7s; }
+    .service-card:nth-child(8) { animation-delay: 0.8s; }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.6s ease;
     }
 
-    /* --- Mobile in Landscape (desktop-like) --- */
-    @media (max-width: 768px) and (orientation: landscape) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .service-card:hover::before {
+      left: 100%;
     }
 
-    /* --- Mobile nav adjustments --- */
+    .service-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--text-accent);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 24px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      transition: all 0.4s ease;
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.15) rotate(5deg);
+    }
+
+    /* Service Icon Gradients */
+    .service-card:nth-child(1) .service-icon { background: var(--accent-gradient); }
+    .service-card:nth-child(2) .service-icon { background: var(--primary-gradient); }
+    .service-card:nth-child(3) .service-icon { background: var(--secondary-gradient); }
+    .service-card:nth-child(4) .service-icon { background: var(--success-gradient); }
+    .service-card:nth-child(5) .service-icon { background: var(--warning-gradient); }
+    .service-card:nth-child(6) .service-icon { background: var(--purple-gradient); }
+    .service-card:nth-child(7) .service-icon { background: var(--orange-gradient); }
+    .service-card:nth-child(8) .service-icon { background: var(--accent-gradient); }
+
+    .service-card h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover h2 {
+      color: var(--text-accent);
+    }
+
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .service-card li {
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .service-card li:before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--text-accent);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover li:before {
+      transform: translateX(4px);
+    }
+
+    .service-card li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      margin-top: 80px;
+      padding: 60px 40px;
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 30px;
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 1s ease-out 0.5s both;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(79, 172, 254, 0.1), transparent);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #4facfe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: var(--accent-gradient);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      margin-top: 60px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #0f172a;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        padding: 1rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        border-radius: 0 0 12px 12px;
-        max-height: 0;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-      }
-      nav.active {
-        display: flex;
-        max-height: 500px;
-        opacity: 1;
-      }
-      nav a {
-         padding: 4px 10px;
-        display: block;
-      }
       .menu-toggle {
         display: block;
       }
+
+      nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(10, 14, 26, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 30px 20px;
+        gap: 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      nav a {
+        font-size: 18px;
+        padding: 12px 0;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+
+      .page-header p {
+        font-size: 1.1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .service-card {
+        padding: 30px 20px;
+      }
+
+      .cta-section {
+        padding: 40px 20px;
+        margin: 60px 10px 0;
+      }
+
+      .cta-section h2 {
+        font-size: 2rem;
+      }
     }
 
-    /* --- Buttons & Misc --- */
-    
-    .btn:hover {
-      background: #06b6d4;
+    /* Scroll Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
     }
-    main {
-      padding: 20px;
-    }
-    .card {
-      background: #1e293b;
-      padding: 16px;
-      border-radius: 8px;
-    }
-    .list {
-      margin: 0;
-      padding-left: 20px;
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
   <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a class="brand" href="/">
+          <img src="/assets/img/mylogo.png" alt="AS TECH IT SOLUTION logo">
+          <span>AS TECH IT SOLUTION</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/#services">Services</a>
+          <a href="/#work">Work</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/#contact">Contact</a>
+          <a class="cta-btn" href="/#contact">Get Started</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-
-  <header class="container header">
-   <a class="brand" href="/">
-      <img src="/assets/img/mylogo.png" alt="AS TECH IT SOLUTION logo">
-      <span>AS TECH IT SOLUTION</span>
-    </a>
-  <!-- Mobile menu button (top-right) -->
-  <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-  <nav>
- <a href="/">Home</a>
-     <a href="/#services">Services</a>
-    <a href="/#work">Work</a>
-   <a href="/pricing" class="active">Pricing</a>
-   <a href="/#contact">Contact</a>
-   <a class="btn" href="/services">All Services</a>
-
-  </nav>
-</header>
-
-  
-  <!-- Main -->
   <main class="container">
-    <h1>Our Services</h1>
-    <p>We deliver end-to-end solutions. Pick a single service or a complete package.</p>
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>Our Complete Services</h1>
+      <p>End-to-end digital solutions designed to transform your business. From concept to launch, we deliver excellence in every project.</p>
+    </div>
 
+    <!-- Services Grid -->
     <div class="services-grid">
-      <!-- Website Packages -->
-      <div class="card">
-        <div class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-          </svg>
-        </div>
-        <h2>Website Packages</h2>
-        <ul class="list">
-          <li>Landing page or multi-page corporate site</li>
-          <li>Content management & basic SEO</li>
-          <li>Analytics, performance, and accessibility</li>
+      <!-- Website Development -->
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h2>Website Development</h2>
+        <ul>
+          <li>Custom responsive websites & landing pages</li>
+          <li>Content management systems (CMS)</li>
+          <li>Performance optimization & SEO</li>
+          <li>Analytics integration & tracking</li>
+          <li>Accessibility compliance (WCAG)</li>
         </ul>
       </div>
 
       <!-- Custom Software -->
-      <div class="card">
-        <div class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M7 12h10M12 7v10"/>
-          </svg>
-        </div>
-        <h2>Custom Software</h2>
-        <ul class="list">
-          <li>Dashboards and internal tools</li>
-          <li>API design & integrations</li>
-          <li>Automation & reporting</li>
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h2>Custom Software Development</h2>
+        <ul>
+          <li>Business dashboards & admin panels</li>
+          <li>Workflow automation systems</li>
+          <li>API design & third-party integrations</li>
+          <li>Database architecture & optimization</li>
+          <li>Scalable cloud-based solutions</li>
         </ul>
       </div>
 
-      <!-- eCommerce -->
-      <div class="card">
-        <div class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="9" cy="21" r="1"/>
-            <circle cx="20" cy="21" r="1"/>
-            <path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/>
-          </svg>
-        </div>
-        <h2>eCommerce</h2>
-        <ul class="list">
-          <li>Product catalogs & checkout</li>
-          <li>Payments & invoicing</li>
+      <!-- E-Commerce Solutions -->
+      <div class="service-card">
+        <div class="service-icon">🛒</div>
+        <h2>E-Commerce Solutions</h2>
+        <ul>
+          <li>Complete online store development</li>
+          <li>Secure payment gateway integration</li>
           <li>Inventory & order management</li>
+          <li>Multi-vendor marketplace platforms</li>
+          <li>Mobile commerce optimization</li>
         </ul>
       </div>
 
-      <!-- Care Plans -->
-      <div class="card">
-        <div class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M21 12a9 9 0 11-6.219-8.56"/>
-            <path d="M21 3v6h-6"/>
-          </svg>
-        </div>
-        <h2>Care Plans</h2>
-        <ul class="list">
-          <li>Security updates & backups</li>
-          <li>Uptime monitoring</li>
-          <li>Small fixes each month</li>
+      <!-- Mobile App Development -->
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h2>Mobile App Development</h2>
+        <ul>
+          <li>Native iOS & Android applications</li>
+          <li>Cross-platform hybrid apps</li>
+          <li>Progressive Web Apps (PWA)</li>
+          <li>App store optimization & deployment</li>
+          <li>Push notifications & analytics</li>
+        </ul>
+      </div>
+
+      <!-- UI/UX Design -->
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h2>UI/UX Design Services</h2>
+        <ul>
+          <li>User research & persona development</li>
+          <li>Wireframing & interactive prototypes</li>
+          <li>Modern interface design systems</li>
+          <li>Conversion rate optimization</li>
+          <li>Brand identity & visual design</li>
+        </ul>
+      </div>
+
+      <!-- SEO & Digital Marketing -->
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <h2>SEO & Digital Marketing</h2>
+        <ul>
+          <li>Search engine optimization (SEO)</li>
+          <li>Google Ads & PPC campaign management</li>
+          <li>Social media marketing & automation</li>
+          <li>Email marketing campaigns</li>
+          <li>Analytics reporting & insights</li>
+        </ul>
+      </div>
+
+      <!-- Business Automation -->
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h2>Business Automation</h2>
+        <ul>
+          <li>Process automation & workflow tools</li>
+          <li>CRM & customer management systems</li>
+          <li>Inventory & supply chain automation</li>
+          <li>Communication & notification systems</li>
+          <li>Data analytics & reporting dashboards</li>
+        </ul>
+      </div>
+
+      <!-- Maintenance & Support -->
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h2>Maintenance & Support</h2>
+        <ul>
+          <li>24/7 monitoring & uptime guarantee</li>
+          <li>Regular security updates & patches</li>
+          <li>Automated backups & disaster recovery</li>
+          <li>Performance optimization & scaling</li>
+          <li>Technical support & troubleshooting</li>
         </ul>
       </div>
     </div>
- 
-    <p style="margin-top:20px;">
-      <a class="btn" href="/#contact">Start your project</a>
-    </p>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to Get Started?</h2>
+        <p>Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
+        <a class="btn" href="/#contact">
+          <span>🚀</span>
+          Start Your Project Today
+        </a>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="container footer">
-    <p>© <span id="year"></span> AS TECH IT SOLUTION. All rights reserved.</p>
-    <a href="/">Home</a>
+  <footer class="container">
+    <p>© <span id="year"></span> AS TECH IT SOLUTION. Crafted with ❤️ in India. All rights reserved.</p>
   </footer>
 
   <script>
-    // Mobile Menu Toggle
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
+    
     menuToggle.addEventListener('click', () => {
       nav.classList.toggle('active');
     });
-    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Close mobile menu when clicking on links
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Enhanced hover effects for service cards
+    document.querySelectorAll('.service-card').forEach((card, index) => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-18px) scale(1.02)';
+        this.style.zIndex = '10';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+        this.style.zIndex = '1';
+      });
+    });
+
+    // Parallax effect for background
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      const backgroundElement = document.querySelector('body::before');
+      if (backgroundElement) {
+        backgroundElement.style.transform = `translateY(${rate}px)`;
+      }
+    });
+
+    // Add loading animation
+    window.addEventListener('load', () => {
+      document.body.style.opacity = '1';
+    });
   </script>
 </body>
 </html>
