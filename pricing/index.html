@@ -137,6 +137,7 @@
       height: 48px;
       border-radius: 12px;
       transition: all 0.3s ease;
+      background: var(--accent-gradient);
     }
 
     .brand:hover img {
@@ -302,6 +303,10 @@
     }
 
     /* Pricing Grid */
+    .pricing-section {
+      padding: 40px 0;
+    }
+
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -319,6 +324,8 @@
       transition: all 0.4s ease;
       position: relative;
       overflow: hidden;
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .pricing-card::before {
@@ -543,6 +550,18 @@
       text-decoration: underline;
     }
 
+    /* Scroll Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .menu-toggle {
@@ -609,18 +628,6 @@
         font-size: 2rem;
       }
     }
-
-    /* Scroll Animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 <body>
@@ -629,7 +636,7 @@
     <div class="container">
       <div class="header-content">
         <a class="brand" href="/">
-          <img src="/assets/img/mylogo.png" alt="AS TECH IT SOLUTION logo">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iMTIiIGZpbGw9InVybCgjZ3JhZGllbnQwXzEzNV8wKSIvPgo8cGF0aCBkPSJNMTIgMTZIMzZWMjBIMTZWMzJIMzZWMzZIMTJWMTZaIiBmaWxsPSJ3aGl0ZSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudDBfMTM1XzAiIHgxPSIwIiB5MT0iMCIgeDI9IjQ4IiB5Mj0iNDgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzRGQUNGRSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMEYyRkUiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K" alt="AS TECH IT SOLUTION logo">
           <span>AS TECH IT SOLUTION</span>
         </a>
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
@@ -675,7 +682,7 @@
     </section>
 
     <!-- Pricing Plans -->
-    <section class="container fade-in">
+    <section class="pricing-section container">
       <div class="pricing-grid">
         <!-- Basic Website -->
         <div class="pricing-card">
@@ -808,45 +815,4 @@
       </div>
     </section>
 
-    <!-- Custom Quote Section -->
-    <section class="custom-quote container fade-in">
-      <div class="quote-card">
-        <div class="quote-content">
-          <h2>Need Something Custom?</h2>
-          <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 30px;">
-            Every business is unique. Let's discuss your specific requirements and create a solution that perfectly fits your needs and budget.
-          </p>
-          <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="/#contact" class="plan-btn plan-btn-primary" style="width: auto; min-width: 200px;">
-              💬 Get Free Consultation
-            </a>
-            <a href="tel:+91-XXXXXXXXXX" class="plan-btn plan-btn-secondary" style="width: auto; min-width: 200px;">
-              📞 Call Now
-            </a>
-          </div>
-          <p style="margin-top: 30px; color: var(--text-secondary); font-size: 0.9rem;">
-            ⚡ Quick Response: We typically respond within 2 hours during business days<br>
-            🎯 Free Quote: No obligation consultation and project estimation
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="container">
-    <p>© <span id="year"></span> AS TECH IT SOLUTION. Crafted with ❤️ in India. All rights reserved.</p>
-    
-  </footer>
-
-  <script>
-    // Set current year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-    
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
+    <!-- Custom Quote Section
