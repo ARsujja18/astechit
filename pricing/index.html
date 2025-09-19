@@ -827,12 +827,28 @@
       line-height: 1.8;
     }
 
-    .address-info .address-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
+.address-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+
+.address-item {
+  flex: 1;
+  min-width: 200px;
+}
+
+.address-item:nth-child(2) {
+  text-align: center;
+}
+
+.address-item:nth-child(3) {
+  text-align: right;
+}
+
 
     .address-item .icon {
       width: 20px;
@@ -1133,9 +1149,7 @@
         transform: translateX(-50%);
       }
 
-      .address-info .address-item {
-        justify-content: center;
-      }
+     
 
       .form-row {
         grid-template-columns: 1fr;
