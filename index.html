@@ -1952,6 +1952,13 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
 });
 document.querySelectorAll("img[data-src]").forEach(img => imageObserver.observe(img));
 </script>
-
+<script>
+function showSuccess(msg) {
+  result.innerHTML = `<div class="success-message">${msg}</div>`;
+  result.scrollIntoView({ behavior: "smooth", block: "center" });
+  alert("✅ Thank you! Your message has been sent successfully. We’ll get back to you within 12 hours.");
+  setTimeout(() => { result.innerHTML = ""; }, 10000);
+}
+</script>
 </body>
 </html> 
