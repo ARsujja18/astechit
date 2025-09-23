@@ -29,6 +29,56 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
+
+<!-- Contact Details Section -->
+<div class="contact-details">
+  <div class="contact-item address">
+    📍<br>
+    5th Floor, Dream Sapphire<br>
+    Ulwe, Navi Mumbai - 410206<br>
+    Maharashtra, India
+  </div>
+
+  <div class="contact-item phone">
+    📞<br>
+    +91 98765 43210
+  </div>
+
+  <div class="contact-item email">
+    ✉️<br>
+    info@astechit.in
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+.contact-details {
+  display: flex;
+  justify-content: space-between; /* Left, Center, Right alignment */
+  text-align: center; /* Centers text inside each column */
+  margin-top: 20px; /* Space above the details */
+  flex-wrap: wrap; /* Makes it responsive */
+  gap: 20px; /* Space between columns on smaller screens */
+}
+
+.contact-item.address {
+  text-align: left;
+  flex: 1;
+}
+
+.contact-item.phone {
+  text-align: center;
+  flex: 1;
+}
+
+.contact-item.email {
+  text-align: right;
+  flex: 1;
+}
+</style>
+
+
+  
   <style>
     * {
       margin: 0;
