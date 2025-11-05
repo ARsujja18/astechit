@@ -29,6 +29,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
+/* replace or add after existing .brand img rule */
+.brand img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: var(--accent-gradient);
+  padding: 4px;               /* <- makes the colored frame visible */
+}
+
+/* keep hover glow (optional) */
+.brand:hover img {
+  box-shadow: var(--shadow-glow);
+}
+
+
+
+
+	  
     * {
       margin: 0;
       padding: 0;
